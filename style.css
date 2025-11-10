@@ -1,5 +1,5 @@
-@tailwind base;
-@tailwind components;
+
+@import "tailwindcss/preflight";
 @tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
@@ -122,3 +122,5 @@
         @apply bg-background text-foreground;
     }
 }
+
+
