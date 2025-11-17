@@ -37,8 +37,20 @@ body{
 }
 .paragraph{
     font-family: sans-serif Brandon Grotesque;
+    max-width: 400px;
 }
 .current{
     font-weight: bold;
     text-decoration: underline;
+}
+
+.card{
+    background-color: #bfb0b0;
+    width: 500px;
+    padding: 20px;
+    margin: 50px;
+
+}
+main{
+    background-color: #bfb0b0;
 }
