@@ -38,3 +38,7 @@ body{
 .paragraph{
     font-family: sans-serif Brandon Grotesque;
 }
+.current{
+    font-weight: bold;
+    text-decoration: underline;
+}
