@@ -13,6 +13,7 @@ body{
     display: flex;
     flex-direction: row;
     margin: 10px;
+    max-height: 40px;
 }
 .overview{
     display: flex;
@@ -27,6 +28,7 @@ body{
 
 .title {
     position: absolute;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
 }
