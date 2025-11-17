@@ -26,7 +26,9 @@ body{
 }
 
 .title {
-    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .heading{
