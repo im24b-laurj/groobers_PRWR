@@ -13,7 +13,8 @@ body{
     display: flex;
     flex-direction: row;
     margin: 10px;
-    max-height: 40px;
+    max-height: 80px;
+
 }
 .overview{
     display: flex;
@@ -21,7 +22,9 @@ body{
     padding: 10px;
 }
 .nav-item{
+    position: relative;
     padding: 10px;
+    width: 50%;
 }
 .settings{
 }
@@ -52,6 +55,8 @@ body{
     width: 500px;
     padding: 20px;
     margin: 50px;
+    box-sizing: border-box;
+
 
     top: 50px;
 
@@ -59,4 +64,18 @@ body{
 }
 main{
     background-color: #bfb0b0;
+}
+.image{
+    width: 450px;
+    height: 200px;
+}
+.card-title{
+    margin-top: 8px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+
 }
