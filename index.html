@@ -3,35 +3,34 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enhanced Fillmore‑Style Page</title>
+    <title>Fillmore-Style with Custom Palette</title>
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(180deg, #e7ebf4 0%, #d2d9e6 40%, #c7cfde 100%);
-            color: #333;
+            background: #D2C1B6;
+            color: #1B3C53;
             line-height: 1.6;
+            min-height: 200vh;
         }
 
-        /* SUPER NAVBAR */
+        /* NAVBAR */
         nav {
             width: 100%;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 2000;
-            padding: 22px 50px;
+            padding: 20px 40px;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
 
-            background: rgba(255,255,255,0.4);
-            backdrop-filter: blur(14px) saturate(180%);
-            border-bottom: 1px solid rgba(255,255,255,0.4);
-
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            background: rgba(35, 76, 106, 0.8); /* #234C6A with transparency */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             transition: top .45s ease, background .3s ease;
         }
 
@@ -41,19 +40,19 @@
             font-size: 1.05rem;
             padding: 10px 16px;
             border-radius: 12px;
+            color: #D2C1B6;
             transition: background .25s ease, transform .25s ease;
         }
 
         .nav-links a:hover {
-            background: rgba(255,255,255,0.6);
+            background: rgba(69, 104, 130, 0.6); /* #456882 semi */
             transform: translateY(-3px);
-            text-decoration: none;
         }
 
-        /* HERO UPGRADE */
+        /* HERO */
         header {
-            height: 65vh;
-            padding-top: 150px;
+            height: 60vh;
+            padding-top: 140px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -61,11 +60,15 @@
             text-align: center;
             position: relative;
 
-            background: linear-gradient(135deg, #d9deea 0%, #edf0f7 50%, #f9fbff 100%);
+            background: linear-gradient(
+                    135deg,
+                    #234C6A 0%,
+                    #456882 60%,
+                    #D2C1B6 100%
+            );
             overflow: hidden;
         }
 
-        /* Decorative shapes */
         header::before, header::after {
             content: "";
             position: absolute;
@@ -75,33 +78,34 @@
         }
 
         header::before {
-            width: 380px;
-            height: 380px;
-            background: #b7c4ff;
-            top: -60px;
-            left: -80px;
+            width: 400px;
+            height: 400px;
+            background: #1B3C53;
+            top: -100px;
+            left: -120px;
         }
 
         header::after {
-            width: 320px;
-            height: 320px;
-            background: #ffc6dd;
-            bottom: -40px;
-            right: -60px;
+            width: 350px;
+            height: 350px;
+            background: #456882;
+            bottom: -80px;
+            right: -80px;
         }
 
         header h1 {
-            font-size: 3.6rem;
+            font-size: 3.8rem;
             letter-spacing: -1px;
             font-weight: 800;
-            color: #222;
+            color: #D2C1B6;
             margin-bottom: 20px;
         }
 
         header p {
             font-size: 1.3rem;
             max-width: 620px;
-            opacity: 0.85;
+            opacity: 0.9;
+            color: #ECECEC;
         }
 
         /* CONTENT */
@@ -114,22 +118,11 @@
         .section h2 {
             font-size: 2.4rem;
             margin-bottom: 1.3rem;
-            color: #222;
+            color: #1B3C53;
             position: relative;
         }
 
-        .section h2::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: #7c87ff;
-            border-radius: 4px;
-        }
-
-        /* CARDS SUPER UPGRADE */
+        /* CARDS */
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -137,48 +130,55 @@
         }
 
         .card {
-            background: #ffffff;
+            background: #FFFFFF;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 28px rgba(27, 60, 83, 0.15);
             transition: transform .25s ease, box-shadow .25s ease;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 45px rgba(27, 60, 83, 0.2);
         }
 
         .card img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
+            flex-shrink: 0;
         }
 
         .card-content {
             padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card-content h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
+            color: #234C6A;
         }
 
         .card-content p {
             font-size: 1rem;
-            color: #555;
+            color: #456882;
+            flex-grow: 1;
         }
 
         footer {
             text-align: center;
             padding: 40px;
             font-size: 0.9rem;
-            color: #666;
-
+            color: #1B3C53;
         }
     </style>
-
 </head>
 <body>
 
@@ -196,7 +196,7 @@
 <header>
     <div>
         <h1>Credit Suisse History</h1>
-        <p>A smooth, modern layout inspired by Fillmore — now fully customizable.</p>
+        <p>A refined design with your custom palette and a modern feel.</p>
     </div>
 </header>
 
@@ -206,29 +206,26 @@
     <section class="section" id="overview">
         <h2>Overview</h2>
         <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" />
-                <div class="card-content">
-                    <h3>Early Years</h3>
-                    <p>Learn about the founding period and the earliest milestones.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a" />
-                <div class="card-content">
-                    <h3>Expansion</h3>
-                    <p>How Credit Suisse grew internationally through the decades.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" />
-                <div class="card-content">
-                    <h3>Modern Era</h3>
-                    <p>The innovations and transformations leading to 2023.</p>
-                </div>
-            </div>
+            <!-- Row 1 -->
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 1</h3><p>Description for card 1.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 2</h3><p>Description for card 2.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 3</h3><p>Description for card 3.</p></div></div>
+            <!-- Row 2 -->
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 4</h3><p>Description for card 4.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 5</h3><p>Description for card 5.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 6</h3><p>Description for card 6.</p></div></div>
+            <!-- Row 3 -->
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 7</h3><p>Description for card 7.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 8</h3><p>Description for card 8.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 9</h3><p>Description for card 9.</p></div></div>
+            <!-- Row 4 -->
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 10</h3><p>Description for card 10.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 11</h3><p>Description for card 11.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 12</h3><p>Description for card 12.</p></div></div>
+            <!-- Row 5 -->
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 13</h3><p>Description for card 13.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 14</h3><p>Description for card 14.</p></div></div>
+            <div class="card"><img src="https://via.placeholder.com/300x180" /><div class="card-content"><h3>Card 15</h3><p>Description for card 15.</p></div></div>
         </div>
     </section>
 
@@ -260,7 +257,7 @@
 
     window.addEventListener("scroll", () => {
         const current = window.scrollY;
-        if (current > lastScroll) nav.style.top = "-100px";
+        if (current > lastScroll) nav.style.top = "-90px";
         else nav.style.top = "0";
         lastScroll = current;
     });
