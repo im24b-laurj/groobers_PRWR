@@ -1,159 +1,94 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1856 – Gründung der SKA</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1856 – Gründung der Schweizerischen Kreditanstalt (SKA)</title>
     <style>
-        :root{
-            --bg: linear-gradient(135deg, #234C6A 0%, #456882 60%, #D2C1B6 100%);
-            --card: #D2C1B6;
-            --primary: #234C6A;
-            --accent: #456882;
-            --muted: #1B3C53;
-            --danger: #c62828;
-        }
-
-        html, body { height: 100%; }
-
         body {
             margin: 0;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: var(--bg);
-            color: #1B3C53;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .close-btn {
-            position: fixed;
-            top: 8px;
-            right: 8px;
-            background: var(--danger);
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 700;
-            box-shadow: 0 6px 18px rgba(198,40,40,0.18);
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #002f4b, #005f73);
+            color: #ffffff;
         }
 
         .container {
-            max-width: 980px;
-            margin: 80px auto;
-            background: var(--card);
-            padding: 36px 44px;
-            border-radius: 14px;
-            box-shadow: 0 10px 40px rgba(15,23,42,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.35);
         }
 
         h1 {
-            font-size: 28px;
-            color: var(--primary);
-            text-align: left;
-            margin: 0 0 18px 0;
-            letter-spacing: -0.2px;
+            font-size: 34px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .meta {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
+        h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            color: #d9f0ff;
+            border-left: 4px solid #aee1ff;
+            padding-left: 10px;
         }
 
-        .text-block {
-            background: linear-gradient(90deg, #f8fafc, #eef2ff);
-            border-radius: 10px;
-            padding: 22px;
-            line-height: 1.65;
-            font-size: 16px;
-            color: #06102b;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+        p {
+            line-height: 1.7;
+            font-size: 17px;
         }
 
-        .visuals {
-            display: flex;
-            gap: 20px;
-            margin-top: 26px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            flex: 1 1 300px;
-            background: #ffffff;
-            border-radius: 12px;
+        .highlight-box {
+            margin-top: 25px;
             padding: 18px;
-            box-shadow: 0 6px 18px rgba(27,60,83,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
+            background: rgba(255,255,255,0.18);
+            border-left: 5px solid #89d6fb;
+            border-radius: 10px;
+            font-size: 17px;
+            line-height: 1.7;
         }
 
-        .card h3 {
-            margin: 0 0 10px 0;
-            color: var(--accent);
-            font-size: 16px;
-        }
-
-        .card p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        .chart {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        @media (max-width: 720px){
-            .container { margin: 60px 18px; padding: 22px; }
-            .visuals { flex-direction: column; }
+        .footer-note {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #cde9ff;
+            opacity: 0.7;
         }
     </style>
 </head>
-
 <body>
 
-<button class="close-btn" onclick="window.location.href='index.html'">X</button>
+<div class="container">
 
-<main class="container" role="main">
     <h1>1856 – Gründung der Schweizerischen Kreditanstalt (SKA)</h1>
 
-    <section class="card" style="margin-top:26px;">
-        <h2 style="color:var(--primary); margin-top:0; font-size:22px;">Gründung der Kreditanstalt</h2>
-        <p style="line-height:1.65; font-size:16px;">
-            Im Jahr 1856 wurde die Schweizerische Kreditanstalt gegründet – ein entscheidender Schritt für die moderne wirtschaftliche Entwicklung der Schweiz. Initiator war Alfred Escher, Unternehmer und Politiker, der erkannte, dass die Schweiz ohne ein starkes Finanzinstitut den wachsenden Kapitalbedarf für den Eisenbahnbau nicht decken konnte.
-        </p>
-    </section>
+    <p>
+        Im Jahr 1856 wurde die Schweizerische Kreditanstalt (SKA) gegründet – ein zentraler Moment in der wirtschaftlichen Entwicklung der modernen Schweiz.
+        Initiiert durch Alfred Escher, Unternehmer und führender Politiker seiner Zeit, sollte die SKA den steigenden Kapitalbedarf des Eisenbahnbaus decken
+        (Uniboard, o. D.; HLS, o. D.). Die Bank war damit nicht nur ein Finanzinstitut, sondern ein nationales Infrastrukturprojekt.
+    </p>
 
-    <section class="card" style="margin-top:26px;">
-        <h2 style="color:var(--primary); margin-top:0; font-size:22px;">Eschers Ziele</h2>
-        <ul style="font-size:16px; line-height:1.8; color:#374151; padding-left:20px;">
-            <li>Mobilisierung von Kapital für den Ausbau der Schweizer Eisenbahnnetze</li>
-            <li>Einbindung von in- und ausländischen Investoren zur Finanzierung von Infrastruktur</li>
-            <li>Schaffung eines leistungsfähigen Finanzinstituts für die junge Industrienation</li>
-            <li>Unterstützung von Großprojekten wie Schienenwegen, Tunneln und Ingenieurbauten</li>
-        </ul>
-    </section>
+    <div class="highlight-box">
+        Die SKA mobilisierte Kapital aus dem In- und Ausland, bündelte finanzielle Ressourcen und finanzierte unter anderem die Nordostbahn – ein entscheidender Schritt für die Industrialisierung der Schweiz.
+    </div>
 
-    <section class="card" style="margin-top:26px;">
-        <h2 style="color:var(--primary); margin-top:0; font-size:22px;">Was die SKA verändert hat</h2>
-        <p style="line-height:1.65; font-size:16px;">
-            Die Gründung der SKA führte zu tiefgreifenden Veränderungen in der Schweizer Finanz- und Industriekultur. Durch ihre zentrale Rolle in der Finanzierung der Eisenbahn – darunter die Nordostbahn – legte sie das Fundament für die Industrialisierung des Landes.
-        </p>
-        <ul style="font-size:16px; line-height:1.8; color:#374151; padding-left:20px;">
-            <li>Professionalisierung der Kreditvergabe</li>
-            <li>Etablierung langfristiger Investitionsstrukturen</li>
-            <li>Förderung industrieller Beteiligungen</li>
-            <li>Übergang der Schweiz vom Agrarstaat zur Industrienation</li>
-        </ul>
-    </section>
+    <h2>Wirtschaftliche und gesellschaftliche Bedeutung</h2>
 
-</main>
+    <p>
+        Die SKA ermöglichte langfristige Investitionen, moderne Kreditvergabestrukturen und industrielle Beteiligungen
+        (UBS, o. D.; Landesmuseum, o. D.). Dadurch wurde der Übergang vom Agrarstaat zur Industrienation beschleunigt.
+        Ihre Rolle prägte das Schweizer Finanzsystem über ein Jahrhundert lang maßgeblich (SRF, o. D.; UBS, o. D.).
+    </p>
+
+    <p class="footer-note">
+        Quelle: Uniboard, o. D.; HLS, o. D.; UBS, o. D.; Landesmuseum, o. D.; SRF, o. D.
+    </p>
+
+</div>
 
 </body>
 </html>

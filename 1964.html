@@ -36,6 +36,20 @@
             border-left: 4px solid #aee1ff;
             padding-left: 10px;
         }
+        .close-btn {
+            position: fixed;
+            top: 8px;
+            right: 8px;
+            background: var(--danger);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: 0 6px 18px rgba(198,40,40,0.18);
+        }
 
         p {
             line-height: 1.7;
@@ -61,6 +75,7 @@
     </style>
 </head>
 <body>
+<button class="close-btn" onclick="window.location.href='index.html'">X</button>
 
 <div class="container">
 

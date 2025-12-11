@@ -1,139 +1,93 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1870 – Erste Auslandsvertretung in New York</title>
     <style>
-        :root{
-            --bg: linear-gradient(135deg, #234C6A 0%, #456882 60%, #D2C1B6 100%);
-            --card: #D2C1B6;
-            --primary: #234C6A;
-            --accent: #456882;
-            --muted: #1B3C53;
-            --danger: #c62828;
-        }
-        html, body { height: 100%; }
         body {
             margin: 0;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: var(--bg);
-            color: #1B3C53;
-            -webkit-font-smoothing: antialiased;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #002f4b, #005f73);
+            color: #ffffff;
         }
-        .close-btn {
-            position: fixed;
-            top: 8px;
-            right: 8px;
-            background: var(--danger);
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 700;
-            box-shadow: 0 6px 18px rgba(198,40,40,0.18);
-        }
+
         .container {
-            max-width: 980px;
-            margin: 80px auto;
-            background: var(--card);
-            padding: 36px 44px;
-            border-radius: 14px;
-            box-shadow: 0 10px 40px rgba(15,23,42,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.35);
         }
+
         h1 {
-            font-size: 28px;
-            color: var(--primary);
-            text-align: left;
-            margin: 0 0 18px 0;
-            letter-spacing: -0.2px;
+            font-size: 34px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .meta {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px 22px;
-            box-shadow: 0 6px 18px rgba(27,60,83,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
-            margin-top: 26px;
-        }
-        .card h2 {
-            color: var(--primary);
-            margin-top: 0;
+
+        h2 {
             font-size: 22px;
+            margin-top: 30px;
+            color: #d9f0ff;
+            border-left: 4px solid #aee1ff;
+            padding-left: 10px;
         }
-        .card p, .card ul {
-            font-size: 16px;
+
+        p {
             line-height: 1.7;
-            color: #374151;
+            font-size: 17px;
         }
-        .highlight-block {
-            background: linear-gradient(90deg, #f8fafc, #eef2ff);
+
+        .highlight-box {
+            margin-top: 25px;
+            padding: 18px;
+            background: rgba(255,255,255,0.18);
+            border-left: 5px solid #89d6fb;
             border-radius: 10px;
-            padding: 22px;
-            line-height: 1.65;
-            font-size: 16px;
-            color: #06102b;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
-            margin-top: 26px;
+            font-size: 17px;
+            line-height: 1.7;
         }
-        @media (max-width: 720px){
-            .container { margin: 60px 18px; padding: 22px; }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #cde9ff;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-<button class="close-btn" onclick="window.location.href='index.html'">X</button>
 
-<main class="container" role="main">
+<div class="container">
+
     <h1>1870 – Erste Auslandsvertretung in New York</h1>
 
-    <section class="card">
-        <h2>Ein Schritt in die internationale Finanzwelt</h2>
-        <p>
-            Im Jahr 1870 eröffnete die Schweizerische Kreditanstalt ihre erste Auslandsvertretung in New York –
-            ein bedeutendes Signal für ihre wachsenden internationalen Ambitionen. Zu dieser Zeit hatte sich
-            New York bereits zu einem der wichtigsten globalen Finanzplätze entwickelt und bot Zugang zu
-            internationalen Kapitalströmen.
-        </p>
-        <p>
-            Die Entscheidung, eine Niederlassung in den USA zu gründen, spiegelte den Anspruch der SKA wider,
-            sich weltweit zu positionieren und Kapital für den Infrastruktur- und Wirtschaftsaufbau der Schweiz
-            zu mobilisieren.
-        </p>
-    </section>
+    <p>
+        Im Jahr 1870 eröffnete die SKA ihre erste Auslandsvertretung in New York – ein klares Signal für ihre internationalen Ambitionen
+        (Alarabiya Net, o. D.; MoneyControl, o. D.). New York hatte sich bereits zu einem bedeutenden globalen Finanzzentrum entwickelt und bot direkten Zugang zu internationalen Kapitalströmen.
+    </p>
 
-    <section class="card">
-        <h2>Strategische Bedeutung</h2>
-        <ul>
-            <li>Anziehung ausländischer Investoren für Schweizer Infrastrukturprojekte</li>
-            <li>Zugang zu einem der größten Kapitalmärkte der Welt</li>
-            <li>Ausbau der Kompetenz im internationalen Finanzgeschäft</li>
-            <li>Stärkung der eigenen Position durch Präsenz in einem globalen Handelszentrum</li>
-        </ul>
-        <p>
-            Die Vertretung in New York ermöglichte der SKA zudem, komplexe Finanzgeschäfte wie Anleihen-Emissionen,
-            Wechsel- und Handelsfinanzierungen direkt vor Ort abzuwickeln.
-        </p>
-    </section>
+    <div class="highlight-box">
+        Die Filiale in New York ermöglichte der SKA, ausländische Investoren zu gewinnen, Kapital für Schweizer Infrastrukturprojekte zu mobilisieren und erstmals umfangreiche Finanztransaktionen außerhalb der Schweiz durchzuführen.
+    </div>
 
-    <section class="card">
-        <h2>Bedeutung für die internationale Entwicklung der Bank</h2>
-        <p>
-            Diese frühe Auslandsniederlassung markierte einen zentralen Schritt in Richtung Globalisierung.
-            Sie bildete die Basis dafür, dass die SKA später in weiteren Märkten aktiv werden konnte, und legte
-            den Grundstein für ihr künftiges internationales Investmentbanking.
-        </p>
-    </section>
+    <h2>Strategische Bedeutung</h2>
 
-</main>
+    <p>
+        Die Präsenz in den USA war ein wichtiger Meilenstein: Die SKA konnte Anleihen-Emissionen, Handelsfinanzierungen und Wechselgeschäfte nun auf internationalem Niveau betreiben
+        (MoneyControl, o. D.). Dieser Schritt bereitete den Boden für die spätere Expansion in weitere Märkte und war ein früher Grundstein für das internationale Investmentbanking der Bank
+        (Alarabiya Net, o. D.).
+    </p>
+
+    <p class="footer-note">
+        Quelle: Alarabiya Net, o. D.; MoneyControl, o. D.
+    </p>
+
+</div>
+
 </body>
 </html>
-j

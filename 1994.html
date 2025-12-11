@@ -13,6 +13,20 @@
             --muted: #1B3C53;
             --danger: #c62828;
         }
+        .close-btn {
+            position: fixed;
+            top: 8px;
+            right: 8px;
+            background: var(--danger);
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: 0 6px 18px rgba(198,40,40,0.18);
+        }
         html, body { height: 100%; }
         body {
             margin: 0;
@@ -84,6 +98,7 @@
     </style>
 </head>
 <body>
+<button class="close-btn" onclick="window.location.href='index.html'">X</button>
 
 <button class="close-btn" onclick="window.location.href='index.html'">X</button>
 
