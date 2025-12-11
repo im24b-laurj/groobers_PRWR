@@ -1,132 +1,103 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1978 – Kooperation mit First Boston</title>
     <style>
-        :root{
-            --bg: linear-gradient(135deg, #234C6A 0%, #456882 60%, #D2C1B6 100%);
-            --card: #D2C1B6;
-            --primary: #234C6A;
-            --accent: #456882;
-            --muted: #1B3C53;
-            --danger: #c62828;
-        }
-        html, body { height: 100%; }
         body {
             margin: 0;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: var(--bg);
-            color: #1B3C53;
-            -webkit-font-smoothing: antialiased;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #002f4b, #005f73);
+            color: #ffffff;
         }
-        .close-btn {
-            position: fixed;
-            top: 8px;
-            right: 8px;
-            background: var(--danger);
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 700;
-            box-shadow: 0 6px 18px rgba(198,40,40,0.18);
-        }
+
         .container {
-            max-width: 980px;
-            margin: 80px auto;
-            background: var(--card);
-            padding: 36px 44px;
-            border-radius: 14px;
-            box-shadow: 0 10px 40px rgba(15,23,42,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.35);
         }
+
         h1 {
-            font-size: 28px;
-            color: var(--primary);
-            margin: 0 0 18px 0;
-            letter-spacing: -0.2px;
+            font-size: 34px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .meta {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 6px 18px rgba(27,60,83,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
-            margin-top: 26px;
-        }
-        .card h2 {
-            color: var(--primary);
-            margin-top: 0;
+
+        h2 {
             font-size: 22px;
+            margin-top: 30px;
+            color: #d9f0ff;
+            border-left: 4px solid #aee1ff;
+            padding-left: 10px;
         }
-        .card p, .card ul {
-            font-size: 16px;
+
+        p {
             line-height: 1.7;
-            color: #374151;
+            font-size: 17px;
         }
-        @media (max-width: 720px){
-            .container { margin: 60px 18px; padding: 22px; }
+
+        .highlight-box {
+            margin-top: 25px;
+            padding: 18px;
+            background: rgba(255,255,255,0.18);
+            border-left: 5px solid #89d6fb;
+            border-radius: 10px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #cde9ff;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-<button class="close-btn" onclick="window.location.href='index.html'">X</button>
-<main class="container" role="main">
+
+<div class="container">
 
     <h1>1978 – Kooperation mit First Boston auf dem Londoner Anleihemarkt</h1>
 
-    <section class="card">
-        <h2>Strategische Partnerschaft</h2>
-        <p>
-            Im Jahr 1978 ging die Schweizerische Kreditanstalt (SKA) eine wegweisende Kooperation mit der US‑Investmentbank <strong>First Boston Corporation</strong> ein. Diese Allianz war sowohl finanziell als auch strategisch motiviert und zielte darauf ab, die globale Wettbewerbsfähigkeit der SKA zu stärken.
-        </p>
-        <p>
-            Gemeinsam gründeten sie ein 50‑50‑Joint‑Venture unter dem Namen <strong>Financière Crédit Suisse First Boston</strong> mit Sitz in London – dem wichtigsten Zentrum des internationalen Anleihemarktes.
-        </p>
-    </section>
+    <p>
+        Für die SKA war 1978 ein entscheidendes Jahr: Sie ging eine strategische Partnerschaft mit der US-Investmentbank
+        <strong>First Boston Corporation</strong> ein. Ziel war eine stärkere globale Positionierung und die Nutzung von First Bostons Expertise
+        im Bereich Anleihen-Emissionen, Fusionen und internationalen Kapitalgeschäften (Wikipedia, o. D.; companies.jrank, o. D.).
+    </p>
 
-    <section class="card">
-        <h2>Warum London so wichtig war</h2>
-        <p>
-            London war damals ein globaler Hub für Anleihen‑Emissionen und internationale Kapitalströme. Dank der neuen Präsenz erhielt die SKA Zugang zu Märkten, die zuvor nur schwer erreichbar waren.
-        </p>
-        <ul>
-            <li>Zugang zu internationalen Emissionskanälen</li>
-            <li>Neue Kundenbasis jenseits der Schweiz</li>
-            <li>Mobilisierung von globalem Kapital</li>
-            <li>Stärkung des internationalen Geschäfts</li>
-        </ul>
-    </section>
+    <div class="highlight-box">
+        Im Rahmen der Kooperation wurde ein 50-50-Joint-Venture unter dem Namen <strong>Financière Crédit Suisse First Boston</strong> mit Sitz in London gegründet.
+    </div>
 
-    <section class="card">
-        <h2>Wissenstransfer und Expertise</h2>
-        <p>
-            Die Kooperation ermöglichte der SKA einen erheblichen Know‑how‑Gewinn. First Boston brachte Expertise in Bereichen wie Handelsgeschäft, Risikoanalyse, Kreditstrukturierung und Kapitalmarktgeschäften ein – wertvolle Bausteine für den Ausbau des Investmentbankings.
-        </p>
-    </section>
+    <h2>Strategische Bedeutung</h2>
 
-    <section class="card">
-        <h2>Langfristige Bedeutung</h2>
-        <p>
-            Die Partnerschaft markierte einen entscheidenden Schritt in der Entwicklung der SKA zu einer globalen Universalbank. Sie stärkte die internationale Position der Bank und legte die Grundlage für die spätere vollständige Integration von <strong>CS First Boston</strong>.
-        </p>
-        <ul>
-            <li>Stärkung der globalen Ausrichtung</li>
-            <li>Erweiterung der Produktpalette und Dienstleistungen</li>
-            <li>Vertiefung der Marktpräsenz im angelsächsischen Raum</li>
-            <li>Grundstein für spätere Übernahmen und Expansion</li>
-        </ul>
-    </section>
+    <p>
+        London war damals ein Zentrum für den Anleihemarkt. Durch die Präsenz in der Stadt konnte die SKA neue Märkte erschließen,
+        Kapital mobilisieren und ihre Kundenbasis über die Schweiz hinaus erweitern. Außerdem erhielt die Bank Zugang zu globalen Emissionskanälen.
+    </p>
 
-</main>
+    <div class="highlight-box">
+        Die Partnerschaft war auch ein Lernprozess: Die SKA profitierte von First Bostons Expertise in Handel, Kreditstrukturierung und Risikoanalyse,
+        was die Entwicklung der Bank zu einem international tätigen Finanzinstitut unterstützte.
+    </div>
+
+    <p>
+        Dieser Schritt legte die Grundlage für die spätere vollständige Übernahme und den Ausbau von CS First Boston und festigte die Vision,
+        die Bank als globale Universalbank zu führen.
+    </p>
+
+    <p class="footer-note">
+        Quellen: Wikipedia (o. D.), companies.jrank (o. D.)
+    </p>
+
+</div>
+
 </body>
 </html>

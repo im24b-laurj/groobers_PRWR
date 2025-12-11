@@ -1,138 +1,92 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1876 – Neuer Hauptsitz am Zürcher Paradeplatz</title>
     <style>
-        :root{
-            --bg: linear-gradient(135deg, #234C6A 0%, #456882 60%, #D2C1B6 100%);
-            --card: #D2C1B6;
-            --primary: #234C6A;
-            --accent: #456882;
-            --muted: #1B3C53;
-            --danger: #c62828;
-        }
-        html, body { height: 100%; }
         body {
             margin: 0;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: var(--bg);
-            color: var(--muted);
-            -webkit-font-smoothing: antialiased;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #002f4b, #005f73);
+            color: #ffffff;
         }
-        .close-btn {
-            position: fixed;
-            top: 8px;
-            right: 8px;
-            background: var(--danger);
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 700;
-            box-shadow: 0 6px 18px rgba(198,40,40,0.18);
-        }
+
         .container {
-            max-width: 980px;
-            margin: 80px auto;
-            background: var(--card);
-            padding: 36px 44px;
-            border-radius: 14px;
-            box-shadow: 0 10px 40px rgba(15,23,42,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.35);
         }
+
         h1 {
-            font-size: 28px;
-            color: var(--primary);
-            margin: 0 0 18px 0;
-            letter-spacing: -0.2px;
+            font-size: 34px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .meta {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px 22px;
-            box-shadow: 0 6px 18px rgba(27,60,83,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
-            margin-top: 26px;
-        }
-        .card h2 {
-            color: var(--primary);
-            margin-top: 0;
+
+        h2 {
             font-size: 22px;
+            margin-top: 30px;
+            color: #d9f0ff;
+            border-left: 4px solid #aee1ff;
+            padding-left: 10px;
         }
-        .card p, .card ul {
-            font-size: 16px;
+
+        p {
             line-height: 1.7;
-            color: #374151;
+            font-size: 17px;
         }
-        .highlight-block {
-            background: linear-gradient(90deg, #f8fafc, #eef2ff);
+
+        .highlight-box {
+            margin-top: 25px;
+            padding: 18px;
+            background: rgba(255,255,255,0.18);
+            border-left: 5px solid #89d6fb;
             border-radius: 10px;
-            padding: 22px;
-            line-height: 1.65;
-            font-size: 16px;
-            color: #06102b;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
-            margin-top: 26px;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #cde9ff;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-<button class="close-btn" onclick="window.location.href='index.html'">X</button>
 
-<main class="container" role="main">
+<div class="container">
+
     <h1>1876 – Neuer Hauptsitz am Zürcher Paradeplatz</h1>
 
+    <p>
+        Im Jahr 1876 bezog die SKA ihr neues Hauptgebäude am Paradeplatz in Zürich, ein repräsentativer Bau, der zum Symbol der Finanzmacht in der Schweiz wurde (Uniboard, o. D.; UBS, o. D.).
+        Mit dem Umzug signalisierte die Bank: „Wir gehören nach Zürich, ins Zentrum der aufstrebenden Wirtschafts- und Finanzmacht.“
+    </p>
 
-    <section class="card">
-        <h2>Ein neues Zentrum der Finanzwelt</h2>
-        <p>
-            Im Jahr 1876 eröffnete die Schweizerische Kreditanstalt ihr neues Hauptgebäude am Zürcher Paradeplatz.
-            Der repräsentative Bau entwickelte sich rasch zu einem Symbol der aufstrebenden Finanzmacht der Schweiz.
-            Obwohl der Börsenplatz damals noch nicht die heutige Bedeutung hatte, setzte die SKA mit ihrem Umzug ein
-            klares Zeichen: Zürich sollte der Mittelpunkt der entstehenden Wirtschafts- und Finanzlandschaft werden.
-        </p>
-    </section>
+    <div class="highlight-box">
+        Der neue Hauptsitz bot Platz für spezialisierte Abteilungen, wie internationale Geschäfte, Risikoprüfung und Kreditanalyse, und diente als organisatorisches Sprungbrett für die spätere Expansion.
+    </div>
 
-    <section class="card">
-        <h2>Strategische Bedeutung des neuen Standorts</h2>
-        <p>
-            Die Entscheidung für den Paradeplatz war weitsichtig. Zürich befand sich in einem tiefgreifenden Wandel:
-            von einer Handelsmetropole hin zu einem modernen Finanzzentrum. Die SKA spielte eine zentrale Rolle in
-            diesem Prozess. Das neue Gebäude bot Raum für spezialisierte Abteilungen wie internationale Geschäfte,
-            Risikoprüfung und Kreditanalyse.
-        </p>
-        <ul>
-            <li>Stärkung der Position im entstehenden Finanzzentrum Zürich</li>
-            <li>Schaffung moderner, spezialisierter Abteilungen</li>
-            <li>Verbesserung der organisatorischen Strukturen</li>
-            <li>Unterstützung der zukünftigen Expansion innerhalb und außerhalb der Schweiz</li>
-        </ul>
-    </section>
+    <h2>Strategische Bedeutung</h2>
 
-    <section class="card">
-        <h2>Symbol für Stabilität und langfristige Ausrichtung</h2>
-        <p>
-            Der neue Hauptsitz stand sinnbildlich für die Ambitionen der Bank. Er vermittelte Sicherheit,
-            Modernität und Beständigkeit – ein wichtiges Signal an Kunden, Investoren und andere Banken. Mit diesem
-            Gebäude zeigte die SKA, dass sie nicht nur ein Gefüge aus Finanzdienstleistungen, sondern eine nachhaltig
-            arbeitende Institution mit langfristiger Perspektive sein wollte.
-        </p>
-        <p>
-            Zugleich markierte das Gebäude einen organisatorischen Wendepunkt: Die Bank war nun strukturell und
-            infrastrukturell vorbereitet auf eine breitere Expansion – sowohl in weitere Schweizer Städte als auch
-            auf internationale Märkte.
-        </p>
-    </section>
+    <p>
+        Die Standortwahl war strategisch klug: Zürich entwickelte sich gerade von einer Handelsmetropole zu einem Finanzzentrum, wobei die SKA maßgeblich beteiligt war.
+        Der Bau symbolisierte Stabilität und langfristiges Denken und unterstrich die feste, etablierte Position der Bank im Finanzmarkt.
+    </p>
 
-</main>
+    <p class="footer-note">
+        Quelle: Uniboard, o. D.; UBS, o. D.; Alarabiya Net, o. D.
+    </p>
+
+</div>
+
 </body>
 </html>

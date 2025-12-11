@@ -1,127 +1,99 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1982 – Gründung der CS Holding</title>
     <style>
-        :root{
-            --bg: linear-gradient(135deg, #234C6A 0%, #456882 60%, #D2C1B6 100%);
-            --card: #D2C1B6;
-            --primary: #234C6A;
-            --accent: #456882;
-            --muted: #1B3C53;
-            --danger: #c62828;
-        }
-        html, body { height: 100%; }
         body {
             margin: 0;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: var(--bg);
-            color: #1B3C53;
-            -webkit-font-smoothing: antialiased;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #002f4b, #005f73);
+            color: #ffffff;
         }
-        .close-btn {
-            position: fixed;
-            top: 8px;
-            right: 8px;
-            background: var(--danger);
-            color: #fff;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 700;
-            box-shadow: 0 6px 18px rgba(198,40,40,0.18);
-        }
+
         .container {
-            max-width: 980px;
-            margin: 80px auto;
-            background: var(--card);
-            padding: 36px 44px;
-            border-radius: 14px;
-            box-shadow: 0 10px 40px rgba(15,23,42,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.35);
         }
+
         h1 {
-            font-size: 28px;
-            color: var(--primary);
-            text-align: left;
-            margin: 0 0 18px 0;
-            letter-spacing: -0.2px;
+            font-size: 34px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .meta {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 6px 18px rgba(27,60,83,0.15);
-            border: 1px solid rgba(15,23,42,0.08);
-            margin-top: 26px;
-        }
-        .card h2 {
-            color: var(--primary);
-            margin-top: 0;
+
+        h2 {
             font-size: 22px;
+            margin-top: 30px;
+            color: #d9f0ff;
+            border-left: 4px solid #aee1ff;
+            padding-left: 10px;
         }
-        .card p, .card ul {
-            font-size: 16px;
+
+        p {
             line-height: 1.7;
-            color: #374151;
+            font-size: 17px;
         }
-        .text-block {
-            background: linear-gradient(90deg, #f8fafc, #eef2ff);
+
+        .highlight-box {
+            margin-top: 25px;
+            padding: 18px;
+            background: rgba(255,255,255,0.18);
+            border-left: 5px solid #89d6fb;
             border-radius: 10px;
-            padding: 22px;
-            line-height: 1.65;
-            font-size: 16px;
-            color: #06102b;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
-        }
-        .card-section {
-            margin-top: 26px;
-        }
-        .card-section h2 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 22px;
-        }
-        .card-section p, .card-section ul {
-            font-size: 16px;
+            font-size: 17px;
             line-height: 1.7;
-            color: #374151;
         }
-        @media (max-width: 720px){
-            .container { margin: 60px 18px; padding: 22px; }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #cde9ff;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-<button class="close-btn" onclick="window.location.href='index.html'">X</button>
-<main class="container" role="main">
+
+<div class="container">
+
     <h1>1982 – Gründung der CS Holding</h1>
 
+    <p>
+        Die SKA nahm 1982 eine bedeutende strategische Weichenstellung vor: Sie gründete die
+        <strong>CS Holding</strong>. Die Holding wurde eingerichtet, um Beteiligungen an Industrieunternehmen zu halten,
+        ohne das operative Bankgeschäft direkt zu belasten. Dadurch konnten Risiken besser gesteuert und gezielt in
+        Wachstumsunternehmen investiert werden (Investing, o. D.; Economic Times, o.D.).
+    </p>
 
-    <section class="card">
-        <h2>Strategische Weichenstellung</h2>
-        <p>Die SKA nahm 1982 eine bedeutende strategische Weichenstellung vor: Sie gründete die <strong>CS Holding</strong>. Die neue Holdinggesellschaft wurde eingerichtet, um Beteiligungen an Industrieunternehmen zu halten, ohne das operative Bankgeschäft direkt zu belasten. Dieses Strukturmodell ermöglichte es der SKA, Risiken besser zu steuern und strategisch in Industrien zu investieren.</p>
-        <p>Dank der Holdingstruktur war es möglich, Beteiligungen über längere Zeiträume zu verwalten und Kapital gezielt in Unternehmen mit starkem Wachstum zu investieren. Anstelle der Bündelung sämtlicher Bankaktivitäten durch die CS Holding wurde eine Plattform geschaffen, die Equity-Investitionen, Industrieengagements und strategische Partnerschaften zusammenführen konnte.</p>
-    </section>
+    <div class="highlight-box">
+        Die Holdingstruktur ermöglichte die Verwaltung von Beteiligungen über längere Zeiträume und bündelte Equity-Investitionen, Industrieengagements und strategische Partnerschaften auf einer Plattform.
+    </div>
 
-    <section class="card">
-        <h2>Expansionsstrategie</h2>
-        <p>Zugleich stellte dieser Schritt einen Teil einer weiterreichenden Expansionsstrategie dar: Die SKA wollte ihre Rolle nicht nur als traditionelles Bankinstitut stärken, sondern auch als global agierende Finanzgruppe mit vielfältigen Geschäftsbereichen. Die CS Holding wurde somit zum Hauptinstrument für Beteiligungen und zur Basis für spätere internationale Aktivitäten, unter anderem in den USA.</p>
-    </section>
+    <h2>Strategische Bedeutung</h2>
 
-    <section class="card">
-        <h2>Governance und Modernisierung</h2>
-        <p>Die Neustrukturierung verdeutlichte zudem, dass die Bank bereit war, ihre Governance zu modernisieren. Die Trennung zwischen dem Banking-Geschäft und Investitionsbeteiligungen erhöhte die Flexibilität, Effizienz und Widerstandsfähigkeit des Unternehmens gegenüber Marktveränderungen – Aspekte, die für den späteren Erfolg und das Wachstum der Credit Suisse entscheidend sein sollten.</p>
-    </section>
-</main>
+    <p>
+        Dieser Schritt war Teil einer umfassenden Expansionsstrategie: Die SKA wollte ihre Rolle als traditionelles Bankinstitut stärken
+        und zugleich als global agierende Finanzgruppe auftreten. Die CS Holding wurde zum Hauptinstrument für Beteiligungen
+        und zur Basis für internationale Aktivitäten, unter anderem in den USA.
+    </p>
+
+    <div class="highlight-box">
+        Die Neustrukturierung zeigte die Bereitschaft der Bank, Governance zu modernisieren, das Banking-Geschäft von Investitionsbeteiligungen zu trennen und damit Flexibilität, Effizienz und Widerstandsfähigkeit gegenüber Marktveränderungen zu erhöhen.
+    </div>
+
+    <p class="footer-note">
+        Quellen: Investing (o. D.), Economic Times (o.D.)
+    </p>
+
+</div>
+
 </body>
 </html>
