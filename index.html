@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fillmore-Style with Custom Palette</title>
+    <title>DIe Geschichte der Credit Suisse</title>
 
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -233,7 +233,7 @@
             <div class="card" onclick="window.location.href='2005.html'"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYl4G73qyVmd2s7CAIETMxJTIruS0NwytR3g&s" /><div class="card-content"><h3>2005</h3><p>Fusion von Credit Suisse und CS First Boston</p></div></div>
             <div class="card" onclick="window.location.href='2006.html'"><img src="https://media.20min.ch/6/image/2023/12/21/e5a7f161-156b-4be5-937c-567140df3447.jpeg?auto=format%2Ccompress%2Cenhance&fit=max&w=1200&h=1200&rect=0%2C0%2C1024%2C676&fp-x=0.5&fp-y=0.5&s=e1bd9e98ec2b62c6cc297c869937e8b7" /><div class="card-content"><h3>2006</h3><p>Verkauf von Winterthur an AXA</p></div></div>
 
-            <div class="card" onclick="window.location.href='2008.html'"><img src="https://bilder.detschlandfunk.de/FI/LE/_7/f8/FILE_7f8dedf6470574586a24cd0d41b79939/imago52718101h-jpg-100-1920x1080.jpg" /><div class="card-content"><h3>2007/2008</h3><p>Globale Finanzkrise und Überstehen ohne Staatsrettung</p></div></div>
+            <div class="card" onclick="window.location.href='2008.html'"><img src="https://bilder.deutschlandfunk.de/FI/LE/_3/c7/FILE_3c772bab0d61775b29eac83c6bfb6992/imago55689996h-jpg-100-1920x1080.jpg" /><div class="card-content"><h3>2007/2008</h3><p>Globale Finanzkrise und Überstehen ohne Staatsrettung</p></div></div>
             <div class="card" onclick="window.location.href='2013.html'"><img src="https://media.cnn.com/api/v1/images/stellar/prod/231025180219-morgan-stanley-headquarters-01172023.jpg?c=original" /><div class="card-content"><h3>2013</h3><p>Übernahme des Vermögensverwaltungsgeschäfts von Morgan Stanley (EMEA)</p></div></div>
             <div class="card" onclick="window.location.href='2023.html'"><img src="https://www.finance-magazin.de/wp-content/uploads/2023/03/Credit-Suisse.-Foto-rarrarorro-adobe.stock_.jpeg" /><div class="card-content"><h3>2023</h3><p>Der finale Zusammenbruch</p></div></div>
         </div>
@@ -243,8 +243,6 @@
         <h2>Inhaltsverzeichnis</h2>
         <p>Here you can put structure, chapters, indexes, etc.</p>
     </section>
-
-
 
     <section class="section" id="charts">
         <h2>Charts</h2>
@@ -268,23 +266,13 @@
                 <h3>Übernahmen pro Dekade</h3>
                 <canvas id="barChart"></canvas>
             </div>
-
-            <!-- Timeline Chart -->
-            <div style="flex:1; min-width:300px; background:#FFFFFF; padding:20px; border-radius:20px; box-shadow:0 12px 28px rgba(27,60,83,0.15);">
-                <h3>Timeline der Meilensteine</h3>
-                <canvas id="timelineChart"></canvas>
-            </div>
         </div>
 
-        <div style="margin-top:15px;">
-            <button onclick="resetCharts()" style="padding:8px 12px; border-radius:8px; border:1px solid #234C6A; background:#234C6A; color:white; cursor:pointer; margin-right:8px;">Diagramme zurücksetzen</button>
-            <button onclick="toggleFullText()" style="padding:8px 12px; border-radius:8px; border:1px solid #234C6A; background:#456882; color:white; cursor:pointer;">Volltext ein-/ausblenden</button>
-        </div>
+
 
         <section id="fulltext" style="display:none; margin-top:15px; color:#1B3C53;">
             <!-- Volltext kann hier eingefügt werden -->
         </section>
-
     </section>
 
     <!-- Chart.js CDN -->
@@ -328,23 +316,14 @@
             options:{ plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true } } }
         });
 
-        // Timeline Chart
-        const tlCtx = document.getElementById('timelineChart');
-        const timelineChart = new Chart(tlCtx, {
-            type:'bar',
-            data:{
-                labels:['1856','1870','1876','1939','1964','1977','1988','1997','2006','2013','2023'],
-                datasets:[{label:'Meilenstein', data:[1,1,1,1,1,1,1,1,1,1,1], backgroundColor:'#456882'}]
-            },
-            options:{ indexAxis:'y', plugins:{ legend:{ display:false } }, scales:{ x:{ display:false } } }
-        });
-
         // Reset Charts
         function resetCharts(){
             railChart.data.datasets[0].data = [12,22,48,63,80];
             barChart.data.datasets[0].data = [0,1,0,1,2,5,3,2];
             pieChart.data.datasets[0].data = [42,28,18,12];
-            railChart.update(); barChart.update(); pieChart.update(); timelineChart.update();
+            railChart.update();
+            barChart.update();
+            pieChart.update();
         }
 
         // Toggle Volltext
@@ -419,7 +398,7 @@
 </main>
 
 <footer>
-    © 2025 Your Name — All rights reserved.
+    Elias Hüngerle, Jonas Laur 11.12.2025
 </footer>
 
 <script>
