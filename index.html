@@ -248,8 +248,113 @@
 
     <section class="section" id="charts">
         <h2>Charts</h2>
-        <p>Here you can display visual charts, analytics, or timelines.</p>
+        <p>Hier sehen Sie historische Meilensteine und Beispiel-Statistiken der Credit Suisse.</p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+            <!-- Finanzierungsbalken -->
+            <div style="flex:1; min-width:300px; background:#FFFFFF; padding:20px; border-radius:20px; box-shadow:0 12px 28px rgba(27,60,83,0.15);">
+                <h3>Kapitalbedarf Eisenbahnbau (1850–1862)</h3>
+                <canvas id="railChart" width="380" height="220"></canvas>
+            </div>
+
+            <!-- Segmentverteilung Pie Chart -->
+            <div style="flex:1; min-width:300px; background:#FFFFFF; padding:20px; border-radius:20px; box-shadow:0 12px 28px rgba(27,60,83,0.15);">
+                <h3>Segmentverteilung (Beispiel)</h3>
+                <canvas id="pieChart"></canvas>
+            </div>
+
+            <!-- Übernahmen Bar Chart -->
+            <div style="flex:1; min-width:300px; background:#FFFFFF; padding:20px; border-radius:20px; box-shadow:0 12px 28px rgba(27,60,83,0.15);">
+                <h3>Übernahmen pro Dekade</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <!-- Timeline Chart -->
+            <div style="flex:1; min-width:300px; background:#FFFFFF; padding:20px; border-radius:20px; box-shadow:0 12px 28px rgba(27,60,83,0.15);">
+                <h3>Timeline der Meilensteine</h3>
+                <canvas id="timelineChart"></canvas>
+            </div>
+        </div>
+
+        <div style="margin-top:15px;">
+            <button onclick="resetCharts()" style="padding:8px 12px; border-radius:8px; border:1px solid #234C6A; background:#234C6A; color:white; cursor:pointer; margin-right:8px;">Diagramme zurücksetzen</button>
+            <button onclick="toggleFullText()" style="padding:8px 12px; border-radius:8px; border:1px solid #234C6A; background:#456882; color:white; cursor:pointer;">Volltext ein-/ausblenden</button>
+        </div>
+
+        <section id="fulltext" style="display:none; margin-top:15px; color:#1B3C53;">
+            <!-- Volltext kann hier eingefügt werden -->
+        </section>
+
     </section>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script>
+        // Rail Chart
+        const ctxRail = document.getElementById('railChart').getContext('2d');
+        const railChart = new Chart(ctxRail, {
+            type: 'bar',
+            data: {
+                labels: ['1850', '1853', '1856', '1859', '1862'],
+                datasets: [{
+                    label: 'Kapitalbedarf Eisenbahnbau (in Mio. CHF)',
+                    data: [12, 22, 48, 63, 80],
+                    borderRadius: 6,
+                    backgroundColor:'#234C6A'
+                }]
+            },
+            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+        });
+
+        // Pie Chart
+        const pieCtx = document.getElementById('pieChart');
+        const pieChart = new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels:['Wealth Management','Investment Banking','Retail & Corporate','Asset Management'],
+                datasets:[{data:[42,28,18,12], hoverOffset:6, backgroundColor:['#234C6A','#456882','#D2C1B6','#1B3C53']}]
+            },
+            options:{ plugins:{ legend:{ position:'bottom' } } }
+        });
+
+        // Bar Chart (Übernahmen pro Dekade)
+        const barCtx = document.getElementById('barChart');
+        const barChart = new Chart(barCtx, {
+            type:'bar',
+            data: {
+                labels:['1860s','1880s','1900s','1930s','1970s','1990s','2000s','2010s'],
+                datasets:[{label:'Übernahmen (Anzahl)', data:[0,1,0,1,2,5,3,2], borderRadius:6, backgroundColor:'#234C6A'}]
+            },
+            options:{ plugins:{ legend:{ display:false } }, scales:{ y:{ beginAtZero:true } } }
+        });
+
+        // Timeline Chart
+        const tlCtx = document.getElementById('timelineChart');
+        const timelineChart = new Chart(tlCtx, {
+            type:'bar',
+            data:{
+                labels:['1856','1870','1876','1939','1964','1977','1988','1997','2006','2013','2023'],
+                datasets:[{label:'Meilenstein', data:[1,1,1,1,1,1,1,1,1,1,1], backgroundColor:'#456882'}]
+            },
+            options:{ indexAxis:'y', plugins:{ legend:{ display:false } }, scales:{ x:{ display:false } } }
+        });
+
+        // Reset Charts
+        function resetCharts(){
+            railChart.data.datasets[0].data = [12,22,48,63,80];
+            barChart.data.datasets[0].data = [0,1,0,1,2,5,3,2];
+            pieChart.data.datasets[0].data = [42,28,18,12];
+            railChart.update(); barChart.update(); pieChart.update(); timelineChart.update();
+        }
+
+        // Toggle Volltext
+        function toggleFullText(){
+            const sec = document.getElementById('fulltext');
+            sec.style.display = (sec.style.display==='none') ? 'block' : 'none';
+            if(sec.style.display==='block') sec.scrollIntoView({behavior:'smooth'});
+        }
+    </script>
+
 
     <section class="section" id="sources">
         <h2>Literaturverzeichnis</h2>
