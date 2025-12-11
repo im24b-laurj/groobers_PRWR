@@ -1,168 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Financial Results 2013–2022 — Chart</title>
+    <meta charset="UTF-8">
+    <title>Bank Profit and Loss Chart</title>
     <style>
-        :root{
-            --bg:#f4f8fb;
-            --card:#ffffff;
-            --accent-1:#0b6fb8; /* primary blue */
-            --accent-2:#2b9be3; /* lighter blue */
-            --accent-3:#7fbbe9; /* pale blue */
-            --muted:#6b7d8f;
-            --danger:#c04a4a;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 40px;
         }
-        body{margin:0;background:linear-gradient(180deg,var(--bg),#eaf4ff);color:#0f1720;-webkit-font-smoothing:antialiased}
-        .wrap{max-width:940px;margin:36px auto;padding:20px}
-        .card{background:var(--card);border-radius:12px;box-shadow:0 8px 30px rgba(9,30,66,0.07);padding:22px}
-        header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-        h1{font-size:18px;margin:0;color:var(--accent-1)}
-        p.desc{margin:4px 0 0;color:var(--muted);font-size:13px}
 
-        .toolbar{display:flex;gap:8px;align-items:center}
-        .btn{background:linear-gradient(180deg,var(--accent-2),var(--accent-1));border:none;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
-        .btn.ghost{background:transparent;border:1px solid rgba(11,111,184,0.12);color:var(--accent-1);font-weight:600}
+        .chart-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-        .chart-area{padding:10px 6px}
-        canvas{max-width:100%;height:420px}
+        .chart-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
 
-        .legend-row{display:flex;gap:12px;align-items:center;margin-top:10px}
-        .legend-swatch{width:14px;height:14px;border-radius:4px}
-        .sw-positive{background:linear-gradient(180deg,var(--accent-2),var(--accent-1))}
-        .sw-negative{background:linear-gradient(180deg,#9fbfe0,var(--accent-3))}
-        footer{margin-top:14px;color:var(--muted);font-size:13px}
+        .chart {
+            display: flex;
+            align-items: flex-end;
+            height: 350px;
+            border-left: 2px solid #444;
+            border-bottom: 2px solid #444;
+            padding: 20px;
+            gap: 20px;
+        }
 
-        @media (max-width:560px){canvas{height:360px}}
+        .bar-group {
+            text-align: center;
+            width: 50px;
+        }
+
+        .bar {
+            width: 100%;
+            display: block;
+            border-radius: 4px 4px 0 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Positive values */
+        .profit {
+            background: #2a8f42;
+        }
+
+        /* Negative values */
+        .loss {
+            background: #c62828;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .bar-group:hover .bar {
+            opacity: 0.8;
+        }
+
+        .year-label {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .value-label {
+            margin-top: 6px;
+            font-size: 13px;
+            color: #333;
+        }
+
     </style>
 </head>
 <body>
-<div class="wrap">
-    <div class="card">
-        <header>
-            <div>
-                <h1>Financial Results (2013–2022) — million CHF (circa)</h1>
-                <p class="desc">Source: strike.market / Annual Reports — values shown in Mio. CHF; negative numbers indicate losses.</p>
-            </div>
-            <div class="toolbar">
-                <button id="downloadBtn" class="btn">Download PNG</button>
-                <button id="resetBtn" class="btn ghost">Reset Zoom</button>
-            </div>
-        </header>
 
-        <div class="chart-area">
-            <canvas id="financeChart" aria-label="Bar chart showing financial results from 2013 to 2022" role="img"></canvas>
-            <div class="legend-row">
-                <div style="display:flex;align-items:center;gap:8px">
-                    <div class="legend-swatch sw-positive"></div><div>Positive results</div>
-                </div>
-                <div style="display:flex;align-items:center;gap:8px">
-                    <div class="legend-swatch sw-negative"></div><div>Negative results</div>
-                </div>
-            </div>
+<div class="chart-container">
+    <div class="chart-title">Bank Profit and Loss Overview (2013–2022)</div>
+
+    <div class="chart">
+
+        <!-- Max height scale is based on 7,293 Mio CHF -->
+        <!-- 1 unit = 0.045px scaling for visualization -->
+
+        <div class="bar-group">
+            <div class="bar profit" style="height: calc(2326 * 0.045px);"></div>
+            <div class="year-label">2013</div>
+            <div class="value-label">+2,326</div>
         </div>
 
-        <footer>
-            Tip: hover a bar to see the exact value. Use the Download button to export the chart as PNG.
-        </footer>
+        <div class="bar-group">
+            <div class="bar profit" style="height: calc(1875 * 0.045px);"></div>
+            <div class="year-label">2014</div>
+            <div class="value-label">+1,875</div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar loss" style="height: calc(2940 * 0.045px); margin-top: auto;"></div>
+            <div class="year-label">2015</div>
+            <div class="value-label">−2,940</div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar loss" style="height: calc(2710 * 0.045px); margin-top: auto;"></div>
+            <div class="year-label">2016</div>
+            <div class="value-label">−2,710</div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar loss" style="height: calc(983 * 0.045px); margin-top: auto;"></div>
+            <div class="year-label">2017</div>
+            <div class="value-label">−983</div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar profit" style="height: calc(2024 * 0.045px);"></div>
+            <div class="year-label">2018</div>
+            <div class="value-label">+2,024</div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar profit" style="height: calc(3419 * 0.045px);"></div>
+            <div class="year-label">2019</div>
+            <div class="value-label">+3,419</div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar profit" style="height: calc(2669 * 0.045px);"></div>
+            <div class="year-label">2020</div>
+            <div class="value-label">+2,669</div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar loss" style="height: calc(1650 * 0.045px); margin-top: auto;"></div>
+            <div class="year-label">2021</div>
+            <div class="value-label">−1,650</div>
+        </div>
+
+        <div class="bar-group">
+            <div class="bar loss" style="height: calc(7293 * 0.045px); margin-top: auto;"></div>
+            <div class="year-label">2022</div>
+            <div class="value-label">−7,293</div>
+        </div>
+
     </div>
+
 </div>
 
-<!-- Chart.js v4 CDN -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<!-- Chart.js zoom plugin (optional) -->
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js"></script>
-
-<script>
-    // Data (values are in Mio. CHF)
-    const labels = ["2013","2014","2015","2016","2017","2018","2019","2020","2021","2022"];
-    const values = [2326,1875,-2940,-2710,-983,2024,3419,2669,-1650,-7293];
-
-    // Create a color per-bar: positive -> blue gradient, negative -> pale blue (so theme remains blue-ish)
-    function barBackgrounds(vals){
-        return vals.map(v => v >= 0 ? 'rgba(43,155,227,0.95)' : 'rgba(127,187,233,0.95)');
-    }
-
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: 'Result (Mio. CHF)',
-            data: values,
-            backgroundColor: barBackgrounds(values),
-            borderRadius: 6,
-            barThickness: 32,
-            borderSkipped: false,
-        }]
-    };
-
-    const config = {
-        type: 'bar',
-        data,
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { display: false },
-                title: {
-                    display: true,
-                    text: 'Company Financial Results (2013–2022)',
-                    align: 'start',
-                    color: '#0b6fb8',
-                    font: {size:14, weight:'600'}
-                },
-                tooltip: {
-                    callbacks: {
-                        label: (ctx) => {
-                            const v = ctx.parsed.y;
-                            const sign = v < 0 ? '−' : '+';
-                            // Use Math.abs to avoid showing negative twice
-                            return `${sign}${Math.abs(v).toLocaleString('en-US')} Mio. CHF`;
-                        }
-                    }
-                },
-                zoom: {
-                    pan: { enabled: true, mode: 'x' },
-                    zoom: { wheel: { enabled: true }, pinch: { enabled: true }, mode: 'x' }
-                }
-            },
-            scales: {
-                x: {
-                    grid: { display: false },
-                    ticks: { color: '#123847', font: { weight: 600 } }
-                },
-                y: {
-                    beginAtZero: false,
-                    grid: { color: 'rgba(11,111,184,0.08)' , borderDash:[3,3]},
-                    ticks: {
-                        callback: function(value){
-                            // Show ticks as e.g. 2,000 => 2,000
-                            return value.toLocaleString('en-US') + ' Mio.';
-                        },
-                        color: '#123847'
-                    }
-                }
-            }
-        }
-    };
-
-    const ctx = document.getElementById('financeChart');
-    const financeChart = new Chart(ctx, config);
-
-    // Download button
-    document.getElementById('downloadBtn').addEventListener('click', () => {
-        const a = document.createElement('a');
-        a.href = financeChart.toBase64Image();
-        a.download = 'financial-results-2013-2022.png';
-        a.click();
-    });
-
-    // Reset zoom
-    document.getElementById('resetBtn').addEventListener('click', () => {
-        if (financeChart.resetZoom) financeChart.resetZoom();
-    });
-
-</script>
 </body>
 </html>
